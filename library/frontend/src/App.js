@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import AuthorList from "./components/Author";
+//import BookList from "./components/Book";
 import axios from "axios";
 
 class App extends React.Component {
@@ -9,6 +10,7 @@ class App extends React.Component {
         super(props);
         this.state={
             'authors': [],
+//            'books':[]
         }
     }
 
@@ -31,6 +33,12 @@ class App extends React.Component {
                 'authors': authors
             })
         }).catch(error => console.log(error))
+//        axios.get('http://127.0.0.1:8000/api/book/').then(response => {
+//            const books = response.data
+//            this.setState({
+//                'books': books
+//            })
+//        }).catch(error => console.log(error))
 
 //        this.setState({
 //            'authors': authors
@@ -41,7 +49,9 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <AuthorList authors={this.state.authors}/>
+                <div>
+                    <AuthorList authors={this.state.authors}/>
+                </div>
             </div>
         );
     }
