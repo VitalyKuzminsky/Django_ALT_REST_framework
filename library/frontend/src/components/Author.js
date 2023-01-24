@@ -5,7 +5,7 @@ const AuthorItem = ({author}) => {
     return(
         <tr>
             <td>
-                <Link to={'/authors/${author.id}'}>
+                <Link to={`/authors/${author.id}`}>
                     {author.first_name}
                 </Link>
             </td>

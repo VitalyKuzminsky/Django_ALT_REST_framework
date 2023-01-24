@@ -1,6 +1,8 @@
+""" Закоментил весь код 4го урока
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import DefaultRouter, SimpleRouter
+
 
 from library.view_e import BookAPIView, BookListAPIView, BookCreateAPIView, BookUpdateAPIView, BookDestroyAPIView, \
     BookRetrieveAPIView, BookViewSet, BookModelViewSet, BookCustomViewSet, BookQuerysetFilterViewSet, \
@@ -49,3 +51,4 @@ urlpatterns = [
     # 2
     path('api/<str:name>/', BookFilterListAPIView.as_view())
 ]
+"""

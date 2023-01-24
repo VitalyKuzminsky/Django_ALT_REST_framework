@@ -1,3 +1,4 @@
+""" Закоментил весь код 4го урока
 from rest_framework.decorators import api_view, renderer_classes, action
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, DestroyAPIView, UpdateAPIView, ListAPIView, \
     get_object_or_404
@@ -166,3 +167,4 @@ class BookLimitOffsetPaginationViewSet(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookModelSerializer
     pagination_class = BookLimitOffsetPagination
+"""
